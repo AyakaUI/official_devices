@@ -1,6 +1,17 @@
 {
     "devices": [
         {
+            "codename": "fogos",
+            "codename_alt": "fogos",
+            "vendor": "Motorola",
+            "model": "Moto G34 5G",
+            "maintainer_name": "whyakari",
+            "frame": null,
+            "active": false,
+            "last_updated": null,
+            "version": null
+        },
+        {
             "codename": "G",
             "codename_alt": "G",
             "vendor": "10or",
