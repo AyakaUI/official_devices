@@ -4,12 +4,7 @@
             "display_name": "Akari",
             "telegram": "whyakari",
             "github": "whyakari"
-        },
-        {
-            "display_name": "",
-            "telegram": "",
-            "github": ""
-        },
+        }
     ],
     "model": "Motorola Moto G84 5G",
     "vendor": "Motorola",
