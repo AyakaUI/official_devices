@@ -1,0 +1,20 @@
+{
+    "maintainer": [
+        {
+            "display_name": "Akari",
+            "telegram": "whyakari",
+            "github": "whyakari"
+        }
+    ],
+    "model": "Motorola Moto G34/45 5G",
+    "vendor": "Xiaomi",
+    "codename": "fogos",
+    "codename_alt": "fogos",
+    "active": true,
+    "version": "sixteen",
+    "release": "monthly",
+    "last_updated": "",
+    "download_link": "",
+    "archive": "",
+    "xda": null
+}
