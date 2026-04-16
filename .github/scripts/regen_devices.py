@@ -75,6 +75,9 @@ for device_file in os.listdir(DEVICES_DIR):
             "active": device_data.get("active", False),
             "last_updated": last_updated,
             "version": version,
+            "release": device_data.get("release"),
+            "download_link": device_data.get("download_link", "#"),
+            "archive": device_data.get("archive", "#"),
         }
 
         device_list.append(device_entry)
