@@ -1,78 +1,121 @@
 import json
 import os
 
+# Configurações de caminhos
+DEVICES_DIR = "API/devices"
+UPDATER_DIR = "API/updater"
+DEVICES_JSON_PATH = "API/devices.json"
+DEVICE_LIST_MD_PATH = "docs/DeviceList.md"
+
 device_list = []
 
-for device in os.listdir("API/devices"):
-    with open(f"API/devices/{device}", "r") as f:
-        device_data = json.load(f)
+# Garante que as pastas de saída existam
+os.makedirs("API", exist_ok=True)
+os.makedirs("docs", exist_ok=True)
 
-    codename = device_data["codename"]
-    updater_path = f"API/updater/{codename}.json"
-    last_updated = None
-    version = None
-    if os.path.exists(updater_path):
-        with open(updater_path, "r") as f:
-            updater_data = json.load(f)
-            if len(updater_data.get("response", [])) > 0:
-                try:
-                    last_updated = int(updater_data["response"][0].get("datetime"))
-                    version = int (updater_data["response"][0].get("version"))
-                except:
-                    pass
+if not os.path.exists(DEVICES_DIR):
+    print(f"❌ Erro: Pasta {DEVICES_DIR} não encontrada.")
+    exit(1)
 
-    device_entry = {
-        "codename": device_data["codename"],
-        "codename_alt": device_data["codename_alt"],
-        "vendor": device_data["vendor"],
-        "model": device_data["model"],
-        "maintainer_name": " && ".join(
-            [maintainer["display_name"] for maintainer in device_data["maintainer"]]
-        ),
-        "frame": None,
-        "active": device_data["active"],
-        "last_updated": last_updated,
-        "version": version,
-    }
+for device_file in os.listdir(DEVICES_DIR):
+    if not device_file.endswith(".json"):
+        continue
+        
+    file_path = os.path.join(DEVICES_DIR, device_file)
+    
+    try:
+        with open(file_path, "r", encoding='utf-8') as f:
+            device_data = json.load(f)
 
-    device_list.append(device_entry)
+        codename = device_data.get("codename")
+        if not codename:
+            print(f"⚠️ Pulando {device_file}: chave 'codename' ausente.")
+            continue
 
-# sort the device list based on codenames
+        updater_path = os.path.join(UPDATER_DIR, f"{codename}.json")
+        last_updated = None
+        version = None
+
+        # Tenta buscar informações no Updater (API de atualizações)
+        if os.path.exists(updater_path):
+            try:
+                with open(updater_path, "r", encoding='utf-8') as f:
+                    updater_data = json.load(f)
+                    response = updater_data.get("response", [])
+                    if response and len(response) > 0:
+                        # Tenta pegar datetime ou last_updated (suporta int ou string)
+                        last_updated = response[0].get("datetime") or response[0].get("last_updated")
+                        version = response[0].get("version")
+            except Exception as e:
+                print(f"⚠️ Erro ao ler updater para {codename}: {e}")
+
+        # TRATAMENTO DOS MAINTAINERS (Aceita Objeto único ou Lista)
+        maintainers_data = device_data.get("maintainer", [])
+        
+        if isinstance(maintainers_data, dict):
+            # Se for um objeto só, transforma em lista para o loop funcionar
+            maintainers_data = [maintainers_data]
+            
+        if isinstance(maintainers_data, list) and len(maintainers_data) > 0:
+            maintainer_names = " && ".join(
+                [m.get("display_name", "Unknown") for m in maintainers_data if isinstance(m, dict)]
+            )
+        else:
+            # Caso o campo maintainer_name (string) já exista no seu JSON original
+            maintainer_names = device_data.get("maintainer_name") or "No Maintainer"
+
+        # Monta a entrada para o devices.json
+        device_entry = {
+            "codename": codename,
+            "codename_alt": device_data.get("codename_alt", codename),
+            "vendor": device_data.get("vendor", "Unknown"),
+            "model": device_data.get("model", "Unknown Device"),
+            "maintainer_name": maintainer_names,
+            "frame": device_data.get("frame"),
+            "active": device_data.get("active", False),
+            "last_updated": last_updated,
+            "version": version,
+        }
+
+        device_list.append(device_entry)
+
+    except json.JSONDecodeError as e:
+        print(f"❌ ERRO DE SINTAXE JSON em: {file_path}")
+        print(f"   Linha {e.lineno}, Coluna {e.colno}: {e.msg}")
+        continue # Pula o arquivo bugado mas continua processando o resto
+    except Exception as e:
+        print(f"❌ Erro inesperado ao processar {device_file}: {e}")
+
+# Ordena por codename
 device_list.sort(key=lambda x: x["codename"])
 
-devices_json = {"devices": device_list}
+# 1. Salva o API/devices.json
+with open(DEVICES_JSON_PATH, "w", encoding='utf-8') as f:
+    json.dump({"devices": device_list}, f, indent=4, ensure_ascii=False)
 
-with open("API/devices.json", "w") as f:
-    json.dump(devices_json, f, indent=4)
-
-# Generate Device List Markdown
+# 2. Gera o docs/DeviceList.md (Markdown)
 active_devices = [d for d in device_list if d["active"]]
-
-# Group devices by brand
 brand_devices = {}
 for device in active_devices:
-    brand_devices.setdefault(device["vendor"], []).append(device)
+    vendor = device["vendor"]
+    brand_devices.setdefault(vendor, []).append(device)
 
 sorted_brands = sorted(brand_devices.keys())
 
-# Construct Markdown content
-lines = [
-    "# Device List",
-    "Here is the list of all the devices actively supported officially by PixelOS. To download the latest version of PixelOS, please visit our official website at [PixelOS.net](https://PixelOS.net), there you can find the necessary resources and information to download and install PixelOS on your device.\n",
-    f"Number Of Devices in Official PixelOS: {len(active_devices)}\n",
-    f"Number of Brands in Official PixelOS: {len(sorted_brands)}\n",
-    "Officially Supported Devices:",
+md_lines = [
+    "# AyakaUI Device List",
+    "List of all officially supported devices.\n",
+    f"**Total Devices:** {len(active_devices)} | **Total Brands:** {len(sorted_brands)}\n",
+    "---",
 ]
 
 for brand in sorted_brands:
-    lines.append(f"\n**{brand}**")
+    md_lines.append(f"\n### {brand}")
     brand_devices[brand].sort(key=lambda x: x["model"])
     for idx, device in enumerate(brand_devices[brand], 1):
-        lines.append(f"{idx}. {device['model']} ({device['codename_alt']})")
+        md_lines.append(f"{idx}. {device['model']} (`{device['codename']}`)")
 
-lines.append(
-    "\nWe hope you enjoyed the project! Your donations help us maintain our infrastructure and continue our work. Please consider showing your support by donating! [Click Me](https://blog.pixelos.net/docs/donate/)"
-)
+with open(DEVICE_LIST_MD_PATH, "w", encoding='utf-8') as f:
+    f.write("\n".join(md_lines))
 
-with open("docs/DeviceList.md", "w") as f:
-    f.write("\n".join(lines))
+print(f"✅ Sucesso! Processados {len(device_list)} dispositivos.")
