@@ -9,7 +9,10 @@
             "frame": null,
             "active": true,
             "last_updated": null,
-            "version": null
+            "version": null,
+            "release": "monthly",
+            "download_link": "",
+            "archive": ""
         },
         {
             "codename": "fogos",
@@ -20,7 +23,10 @@
             "frame": null,
             "active": true,
             "last_updated": 1776342337,
-            "version": "16.2"
+            "version": "16.2",
+            "release": "monthly",
+            "download_link": "",
+            "archive": ""
         }
     ]
 }
