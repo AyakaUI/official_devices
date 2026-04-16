@@ -1,42 +1,44 @@
-name: Update devices json and device list
+name: Update AyakaUI devices and list
 
 on:
   push:
     paths:
       - .github/workflows/regen_devices.yaml
-      - API/*
+      - API/**
   workflow_dispatch:
 
 jobs:
-  clone:
-    runs-on: ubuntu-slim
+  regen:
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
 
       - name: Regen devices json and device list
         run: python3 .github/scripts/regen_devices.py
 
-      - name: Commit to repo
-        uses: stefanzweifel/git-auto-commit-action@v7
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           commit_message: "[CI] Regen devices.json and DeviceList.md"
           file_pattern: "API/devices.json docs/DeviceList.md"
 
-      - name: Wait for cache
-        run: sleep 10
-
-      - name: Revalidate website
+      # Opcional: Revalidar o cache do seu site AyakaUI
+      # Se você não tiver um endpoint de revalidação ainda, pode comentar essa parte
+      - name: Revalidate Website Cache
+        if: success()
         env:
           TOKEN: ${{ secrets.REVALIDATION_SECRET }}
-          BYPASS_TOKEN: ${{ secrets.CF_BYPASS_TOKEN }}
         run: |
-          curl -X POST https://www.pixelos.net/api/revalidate \
-            -H "Authorization: Bearer $TOKEN" \
-            -H "cf-bypass: $BYPASS_TOKEN" \
-            -H "Content-Type: application/json" \
-            -H "User-Agent: GitHub-Actions" \
-            -d '{"target": "all"}'
-  
+          # Exemplo para Vercel ou Cloudflare Pages (ajuste a URL para a sua)
+          # curl -X POST https://ayaka-ui.org/api/revalidate \
+          #  -H "Authorization: Bearer $TOKEN" \
+          #  -d '{"target": "all"}'
+          echo "Cache revalidation step - adjust URL when ready"
