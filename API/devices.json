@@ -1,0 +1,14 @@
+{
+    "devices": [
+        {
+            "codename": "fogos",
+            "codename_alt": "fogos",
+            "model": "Moto G34/45 5G",
+            "maintainer_name": "Akari",
+            "frame": null,
+            "active": false,
+            "last_updated": null,
+            "version": null
+        }
+    ]
+}
