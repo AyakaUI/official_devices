@@ -1,6 +1,17 @@
 {
     "devices": [
         {
+            "codename": "bangkk",
+            "codename_alt": "bangkk",
+            "vendor": "Motorola",
+            "model": "Motorola Moto G84 5G",
+            "maintainer_name": "Akari",
+            "frame": null,
+            "active": true,
+            "last_updated": null,
+            "version": null
+        },
+        {
             "codename": "fogos",
             "codename_alt": "fogos",
             "vendor": "Motorola",
@@ -9,7 +20,7 @@
             "frame": null,
             "active": true,
             "last_updated": 1776342337,
-            "version": null
+            "version": "16.2"
         }
     ]
 }
