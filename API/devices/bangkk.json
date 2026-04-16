@@ -1,0 +1,20 @@
+{
+    "maintainer": [
+        {
+            "display_name": "Akari",
+            "telegram": "whyakari",
+            "github": "whyakari"
+        }
+    ],
+    "model": "Motorola Moto G84 5G",
+    "vendor": "Motorola",
+    "codename": "bangkk",
+    "codename_alt": "bangkk",
+    "active": true,
+    "version": "sixteen",
+    "release": "monthly",
+    "last_updated": "",
+    "download_link": "",
+    "archive": "",
+    "xda": null
+}
