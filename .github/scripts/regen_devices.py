@@ -57,7 +57,7 @@ for device_file in os.listdir(DEVICES_DIR):
             maintainers_data = [maintainers_data]
             
         if isinstance(maintainers_data, list) and len(maintainers_data) > 0:
-            maintainer_names = " && ".join(
+            maintainer_names = " , ".join(
                 [m.get("display_name", "Unknown") for m in maintainers_data if isinstance(m, dict)]
             )
         else:
