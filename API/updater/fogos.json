@@ -1,11 +1,11 @@
 {
   "response": [
     {
-      "datetime": 1777587579,
-      "filename": "AyakaUI_BP4A-GAPPS-fogos-OFFICIAL-20260430-222206.zip",
-      "id": "e767b71d5e6db3ed8ceb3257825c293a",
-      "size": 2354587284,
-      "url": "https://gitlab.com/api/v4/projects/ruri%2Fayaka-releases/packages/generic/builds/AyakaUI_BP4A-GAPPS-fogos-OFFICIAL-20260430-222206/AyakaUI_BP4A-GAPPS-fogos-OFFICIAL-20260430-222206.zip",
+      "datetime": 1777665180,
+      "filename": "AyakaUI_BP4A-GAPPS-fogos-OFFICIAL-20260501-195403.zip",
+      "id": "5c02ab74ccc0c74ccaea8312227e8e22",
+      "size": 2354586443,
+      "url": "https://gitlab.com/api/v4/projects/ruri%2Fayaka-releases/packages/generic/builds/AyakaUI_BP4A-GAPPS-fogos-OFFICIAL-20260501-195403/AyakaUI_BP4A-GAPPS-fogos-OFFICIAL-20260501-195403.zip",
       "version": "BP4A"
     }
   ]
