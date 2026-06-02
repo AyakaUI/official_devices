@@ -1,4 +1,5 @@
 # 02-Jun-2026
+- Builtin with RKSU.
 - Switch Kernel to LineageOS.
 - Updated fingerprint to most recent.
 - Redesigned AyakaLab settings.
