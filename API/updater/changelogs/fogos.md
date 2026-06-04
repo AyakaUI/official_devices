@@ -1,3 +1,6 @@
+# 04-Jun-2026
+- Implement DolbyAtmos Lunaris.
+
 # 02-Jun-2026
 - Builtin with RKSU.
 - Switch Kernel to LineageOS.
