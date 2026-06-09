@@ -1,3 +1,9 @@
+# 08-Jun-2026
+- Switch perf to Schedutil for batter battery consume
+- Removed func spoof apps; this one has broken Gboard translator, so I removed it for now.
+- use url pif check from AyakaUI
+- dont move notch cutout to display, so revert it.
+
 # 04-Jun-2026
 - Implement DolbyAtmos Lunaris.
 
