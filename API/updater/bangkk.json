@@ -1,11 +1,11 @@
 {
   "response": [
     {
-      "datetime": 1780599603,
-      "filename": "AyakaUI_BP4A-GAPPS-bangkk-OFFICIAL-20260604-190140.zip",
-      "id": "6eeff0ce7e87022c345f803c61c86db2",
-      "size": 2357406444,
-      "url": "https://gitlab.com/api/v4/projects/ruri%2Fayaka-releases/packages/generic/builds/AyakaUI_BP4A-GAPPS-bangkk-OFFICIAL-20260604-190140/AyakaUI_BP4A-GAPPS-bangkk-OFFICIAL-20260604-190140.zip",
+      "datetime": 1780963726,
+      "filename": "AyakaUI_BP4A-GAPPS-bangkk-OFFICIAL-20260609-000959.zip",
+      "id": "7434870057c4dac96d81c62eda59925d",
+      "size": 2357522375,
+      "url": "https://gitlab.com/api/v4/projects/ruri%2Fayaka-releases/packages/generic/builds/AyakaUI_BP4A-GAPPS-bangkk-OFFICIAL-20260609-000959/AyakaUI_BP4A-GAPPS-bangkk-OFFICIAL-20260609-000959.zip",
       "version": "BP4A"
     }
   ]
