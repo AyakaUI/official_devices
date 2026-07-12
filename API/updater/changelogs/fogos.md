@@ -1,3 +1,6 @@
+# 12-July-2026
+- Full Changelog https://blog-ayaka.vercel.app/changelogs
+
 # 08-Jun-2026
 - Switch perf to Schedutil for batter battery consume
 - Removed func spoof apps; this one has broken Gboard translator, so I removed it for now.
