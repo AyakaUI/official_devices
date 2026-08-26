@@ -4,10 +4,10 @@
             "display_name": "test",
             "telegram": "testkkk",
             "github": "ksksk"
-        },
+        }
     ],
     "model": "Poco F3/Mi 11X/Redmi K40",
-    "vendor": "Samsung",
+    "vendor": "Xiaomi",
     "codename": "alioth",
     "codename_alt": "alioth",
     "active": true,
