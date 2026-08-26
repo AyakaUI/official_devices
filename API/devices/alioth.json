@@ -1,0 +1,20 @@
+{
+    "maintainer": [
+        {
+            "display_name": "test",
+            "telegram": "testkkk",
+            "github": "ksksk"
+        },
+    ],
+    "model": "Poco F3/Mi 11X/Redmi K40",
+    "vendor": "Samsung",
+    "codename": "alioth",
+    "codename_alt": "alioth",
+    "active": true,
+    "version": "sixteen",
+    "release": "monthly",
+    "last_updated": "",
+    "download_link": "",
+    "archive": "",
+    "xda": null
+}
