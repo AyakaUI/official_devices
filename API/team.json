@@ -1,7 +1,9 @@
-[
- {
-  "display_name":"Akari",
-  "github":"whyakari",
-  "telegram":"whyakari"
- }
-]
+{
+ "team":[
+  {
+   "display_name":"Akari",
+   "github":"whyakari",
+   "telegram":"whyakari"
+  }
+ ]
+}
