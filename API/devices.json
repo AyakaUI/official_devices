@@ -27,6 +27,17 @@
             "release": "monthly",
             "download_link": "",
             "archive": ""
+        },
+        {
+            "codename": "alioth",
+            "codename_alt": "alioth/aliothin",
+            "vendor": "Xiaomi",
+            "model": "Poco F3/Mi 11X/Redmi K40",
+            "maintainer_name": "Tkiliay",
+            "frame": null,
+            "active": true,
+            "last_updated": 1781100871,
+            "version": 16
         }
     ]
 }
