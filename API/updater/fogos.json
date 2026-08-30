@@ -1,12 +1,19 @@
-{
-  "response": [
-    {
-      "datetime": 1783878920,
-      "filename": "AyakaUI_GAPPS-fogos-OFFICIAL-20260712-175655.zip",
-      "id": "0b96490b55b0cb475ee2bdf9d8a3114e",
-      "size": 2260777856,
-      "url": "https://gitlab.com/api/v4/projects/ruri%2Fayaka-releases/packages/generic/builds/AyakaUI_GAPPS-fogos-OFFICIAL-20260712-175655/AyakaUI_GAPPS-fogos-OFFICIAL-20260712-175655.zip",
-      "version": "sixteen-qpr2"
-    }
-  ]
-}
+[
+  {
+    "datetime": 1787442386,
+    "files": [
+      {
+        "filename": "AyakaUI_GAPPS-fogos-OFFICIAL-20260822-234928.zip",
+        "os_patch_level": "2026-08-01",
+        "os_sdk_level": 37,
+        "ota_property_files": "payload_metadata.bin:4057:174667,payload.bin:4057:2569413607,payload_properties.txt:2569417722:156,apex_info.pb:1961:1478,care_map.pb:3486:524,metadata:69:676,metadata.pb:813:1100",
+        "sha256": "5ecc38c08a7ca940d43f37c3fe857554f1c490f9f923a5dfe72dd2522b4ac375",
+        "size": 2569420843,
+        "url": "https://gitlab.com/api/v4/projects/ruri%2Fayaka-releases/packages/generic/builds/AyakaUI_GAPPS-fogos-OFFICIAL-20260822-234928/AyakaUI_GAPPS-fogos-OFFICIAL-20260822-234928.zip"
+      }
+    ],
+    "type": "ci",
+    "version": "17.0"
+
+  }
+]
