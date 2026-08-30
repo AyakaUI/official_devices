@@ -4,43 +4,48 @@ on:
   push:
     paths:
       - .github/workflows/regen_devices.yaml
+      - .github/scripts/regen_devices.py
       - API/**
   workflow_dispatch:
 
 jobs:
   regen:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     permissions:
       contents: write
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Regen devices json and device list
         run: python3 .github/scripts/regen_devices.py
 
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Commit generated files
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
-          commit_message: "[CI] Regen devices.json and DeviceList.md"
+          commit_message: "[CI] Update AyakaUI devices list"
           file_pattern: "API/devices.json docs/DeviceList.md"
 
-      # Opcional: Revalidar o cache do seu site AyakaUI
-      # Se você não tiver um endpoint de revalidação ainda, pode comentar essa parte
-      - name: Revalidate Website Cache
+      - name: Wait for cache
+        run: sleep 10
+
+      - name: Revalidate website
         if: success()
         env:
           TOKEN: ${{ secrets.REVALIDATION_SECRET }}
+          BYPASS_TOKEN: ${{ secrets.CF_BYPASS_TOKEN }}
+
         run: |
-          # Exemplo para Vercel ou Cloudflare Pages (ajuste a URL para a sua)
-          # curl -X POST https://ayaka-ui.org/api/revalidate \
-          #  -H "Authorization: Bearer $TOKEN" \
-          #  -d '{"target": "all"}'
-          echo "Cache revalidation step - adjust URL when ready"
+          curl -X POST https://ayakaui.vercel.app/api/revalidate \
+            -H "Authorization: Bearer $TOKEN" \
+            -H "cf-bypass: $BYPASS_TOKEN" \
+            -H "Content-Type: application/json" \
+            -H "User-Agent: GitHub-Actions" \
+            -d '{"target":"all"}'
