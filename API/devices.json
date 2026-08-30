@@ -5,14 +5,12 @@
             "codename_alt": "bangkk",
             "vendor": "Motorola",
             "model": "Motorola Moto G84 5G",
-            "maintainer_name": "Akari , ZedissP",
+            "maintainer_name": "Akari && ZedissP",
             "frame": null,
             "active": true,
-            "last_updated": 1780963726,
-            "version": "sixteen-qpr2",
-            "release": "monthly",
-            "download_link": "",
-            "archive": ""
+            "last_updated": null,
+            "version": null,
+            "release": "monthly"
         },
         {
             "codename": "fogos",
@@ -22,11 +20,9 @@
             "maintainer_name": "Akari",
             "frame": null,
             "active": true,
-            "last_updated": 1783878920,
-            "version": "sixteen-qpr2",
-            "release": "monthly",
-            "download_link": "",
-            "archive": ""
+            "last_updated": null,
+            "version": null,
+            "release": "monthly"
         }
     ]
 }
