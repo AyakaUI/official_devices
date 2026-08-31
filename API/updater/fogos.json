@@ -13,8 +13,7 @@
       }
     ],
     "type": "ci",
-    "version": "17.0"
-,
+    "version": "17.0",
     "additional_images": [
       {
         "name": "boot.img",
