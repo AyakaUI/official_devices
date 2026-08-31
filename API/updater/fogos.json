@@ -3,13 +3,13 @@
     "datetime": 1787442386,
     "files": [
       {
-        "filename": "AyakaUI_GAPPS-fogos-OFFICIAL-20260822-234928.zip",
+        "filename": "AyakaUI_fogos-GAPPS-17.0-20260830-1823.zip",
         "os_patch_level": "2026-08-01",
         "os_sdk_level": 37,
         "ota_property_files": "payload_metadata.bin:4057:174667,payload.bin:4057:2569413607,payload_properties.txt:2569417722:156,apex_info.pb:1961:1478,care_map.pb:3486:524,metadata:69:676,metadata.pb:813:1100",
         "sha256": "5ecc38c08a7ca940d43f37c3fe857554f1c490f9f923a5dfe72dd2522b4ac375",
         "size": 2569420843,
-        "url": "https://gitlab.com/api/v4/projects/ruri%2Fayaka-releases/packages/generic/builds/AyakaUI_GAPPS-fogos-OFFICIAL-20260822-234928/AyakaUI_GAPPS-fogos-OFFICIAL-20260822-234928.zip"
+        "url": "https://ayakaui.vercel.app/d/seventeen/fogos/AyakaUI_fogos-GAPPS-17.0-20260830-1823.zip"
       }
     ],
     "type": "ci",
