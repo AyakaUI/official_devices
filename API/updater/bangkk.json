@@ -1,19 +1,29 @@
 [
   {
-    "datetime": 1789066562,
+    "datetime": 1789076792,
     "files": [
       {
-        "filename": "AyakaUI_bangkk-GAPPS-17.0-20260910-1900.zip",
+        "filename": "AyakaUI_bangkk-GAPPS-17.0-20260910-2147.zip",
         "os_patch_level": "2026-09-01",
         "os_sdk_level": 37,
-        "ota_property_files": "payload_metadata.bin:4049:172437,payload.bin:4049:2535478961,payload_properties.txt:2535483068:156,apex_info.pb:1977:1448,care_map.pb:3472:530,metadata:69:678,metadata.pb:815:1114",
-        "sha256": "33c5a7e247050247b92bc363d31b257d065b15a9eaf3351c7254046e4b287571",
-        "size": 2535486189,
-        "url": "https://ayakaui.vercel.app/d/seventeen/bangkk/AyakaUI_bangkk-GAPPS-17.0-20260910-1900.zip"
+        "ota_property_files": "payload_metadata.bin:4049:172437,payload.bin:4049:2535472216,payload_properties.txt:2535476323:156,apex_info.pb:1977:1448,care_map.pb:3472:530,metadata:69:678,metadata.pb:815:1114",
+        "sha256": "d88c07dfac569995fbe3cb37d9b1ba4350ca7bf9a4d2d9f6e9270ed9c865bfb1",
+        "size": 2535479444,
+        "url": "https://ayakaui.vercel.app/d/seventeen/bangkk/AyakaUI_bangkk-GAPPS-17.0-20260910-2147.zip"
       }
     ],
     "type": "ci",
-    "version": "17.0"
+    "version": "17.0",
+    "additional_images": [
+      {
+        "name": "boot.img",
+        "url": "https://ayakaui.vercel.app/d/seventeen/bangkk/boot.img"
+      },
+      {
+        "name": "vendor_boot.img",
+        "url": "https://ayakaui.vercel.app/d/seventeen/bangkk/vendor_boot.img"
+      }
+    ]
 
   }
 ]
