@@ -1,12 +1,19 @@
-{
-  "response": [
-    {
-      "datetime": 1780963726,
-      "filename": "AyakaUI_BP4A-GAPPS-bangkk-OFFICIAL-20260609-000959.zip",
-      "id": "7434870057c4dac96d81c62eda59925d",
-      "size": 2357522375,
-      "url": "https://gitlab.com/api/v4/projects/ruri%2Fayaka-releases/packages/generic/builds/AyakaUI_BP4A-GAPPS-bangkk-OFFICIAL-20260609-000959/AyakaUI_BP4A-GAPPS-bangkk-OFFICIAL-20260609-000959.zip",
-      "version": "sixteen-qpr2"
-    }
-  ]
-}
+[
+  {
+    "datetime": 1789066562,
+    "files": [
+      {
+        "filename": "AyakaUI_bangkk-GAPPS-17.0-20260910-1900.zip",
+        "os_patch_level": "2026-09-01",
+        "os_sdk_level": 37,
+        "ota_property_files": "payload_metadata.bin:4049:172437,payload.bin:4049:2535478961,payload_properties.txt:2535483068:156,apex_info.pb:1977:1448,care_map.pb:3472:530,metadata:69:678,metadata.pb:815:1114",
+        "sha256": "33c5a7e247050247b92bc363d31b257d065b15a9eaf3351c7254046e4b287571",
+        "size": 2535486189,
+        "url": "https://ayakaui.vercel.app/d/seventeen/bangkk/AyakaUI_bangkk-GAPPS-17.0-20260910-1900.zip"
+      }
+    ],
+    "type": "ci",
+    "version": "17.0"
+
+  }
+]
