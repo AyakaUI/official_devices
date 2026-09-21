@@ -1,3 +1,6 @@
+# 20-Set-2026
+- New Update!
+  
 # 12-July-2026
 - Full Changelog https://blog-ayaka.vercel.app/changelogs
 
