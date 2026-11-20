@@ -5,7 +5,7 @@
 - Upstreamed kernel to 6.1. Thanks to vishal/sedona-team and others contributors.
 - Dropped Dolby for now.
 - DroidSpaces package Updated
-- Dropped root prebuilt by default. You can use BakaSU patching via LKM.
+- Dropped root prebuilt by default. You can use BakaSU patching boot.img using LKM.
 
 # 20-Set-2026
 - New Update!
