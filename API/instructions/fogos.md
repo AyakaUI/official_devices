@@ -3,10 +3,12 @@
 ## Clean Flash
 - 1 fastboot flash boot boot.img
 - 2 fastboot flash vendor_boot vendor_boot.img
-- 3 Go to Recovery Ayaka
-- 4 sideload + Ayaka*.zip
-- 5 formata data
-- 6 reboot.
+- 4 fastboot flash dtbo dtbo.img
+- 5 Go to Recovery Ayaka
+- 6 sideload + Ayaka*.zip
+- 7 formata data
+- 8 reboot.
+### Warning: dtbo is mandatory flashing for boot recovery!
 
 
 # Dirty Flash
