@@ -1,4 +1,5 @@
 # 20-Nov-2026
+- Is recommended clean flash. Dirty flash It can cause unexpected bugs.
 - Redesigned Spoofing Feature! Go to Settings -> System -> (Advanced) -> Spoofing
 - New Devices Trees! thanks to Sedona-Team.
 - Upstreamed kernel to 6.1. Thanks to vishal/sedona-team and others contributors.
