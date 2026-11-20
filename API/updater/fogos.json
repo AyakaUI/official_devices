@@ -1,15 +1,15 @@
 [
   {
-    "datetime": 1789949327,
+    "datetime": 1795146674,
     "files": [
       {
-        "filename": "AyakaUI_fogos-GAPPS-17.0-20260921-0011.zip",
-        "os_patch_level": "2026-09-01",
+        "filename": "AyakaUI_fogos-GAPPS-17.0-20261120-0352.zip",
+        "os_patch_level": "2026-11-01",
         "os_sdk_level": 37,
-        "ota_property_files": "payload_metadata.bin:4059:174047,payload.bin:4059:2561477021,payload_properties.txt:2561481138:156,apex_info.pb:1962:1478,care_map.pb:3487:525,metadata:69:676,metadata.pb:813:1101",
-        "sha256": "42453589bfe6e68ac4dd24820e50d1c9319f56b2492c1f910153d8017db977db",
-        "size": 2561484259,
-        "url": "https://ayakaui.vercel.app/d/seventeen/fogos/AyakaUI_fogos-GAPPS-17.0-20260921-0011.zip"
+        "ota_property_files": "payload_metadata.bin:4261:154601,payload.bin:4261:2408835120,payload_properties.txt:2408839439:156,apex_info.pb:1999:1485,care_map.pb:3531:683,metadata:69:681,metadata.pb:818:1133",
+        "sha256": "43918a35ac4f18f727c8b259197fea477122b8de07f513a812cf27e7f01b1476",
+        "size": 2408842560,
+        "url": "https://ayakaui.vercel.app/d/seventeen/fogos/AyakaUI_fogos-GAPPS-17.0-20261120-0352.zip"
       }
     ],
     "type": "ci",
@@ -22,6 +22,10 @@
       {
         "name": "vendor_boot.img",
         "url": "https://ayakaui.vercel.app/d/seventeen/fogos/vendor_boot.img"
+      },
+      {
+        "name": "dtbo.img",
+        "url": "https://ayakaui.vercel.app/d/seventeen/fogos/dtbo.img"
       }
     ]
 
