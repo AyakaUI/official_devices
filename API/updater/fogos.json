@@ -1,15 +1,15 @@
 [
   {
-    "datetime": 1795561397,
+    "datetime": 1795564651,
     "files": [
       {
-        "filename": "AyakaUI_fogos-GAPPS-17.0-20261124-2304.zip",
+        "filename": "AyakaUI_fogos-GAPPS-17.0-20261124-2358.zip",
         "os_patch_level": "2026-11-01",
         "os_sdk_level": 37,
-        "ota_property_files": "payload_metadata.bin:4261:154601,payload.bin:4261:2408438476,payload_properties.txt:2408442795:156,apex_info.pb:1999:1485,care_map.pb:3531:683,metadata:69:681,metadata.pb:818:1133",
-        "sha256": "fb679a0dfb50a461c6ac83070d0db8663ffe75dd1a9aa154154de817835438cf",
-        "size": 2408445916,
-        "url": "https://ayakaui.vercel.app/d/seventeen/fogos/AyakaUI_fogos-GAPPS-17.0-20261124-2304.zip"
+        "ota_property_files": "payload_metadata.bin:4261:154601,payload.bin:4261:2408437969,payload_properties.txt:2408442288:156,apex_info.pb:1999:1485,care_map.pb:3531:683,metadata:69:681,metadata.pb:818:1133",
+        "sha256": "1b44d60016b7a85dadf75cac67b443b58e3b2c95c25ce87bbc0066ca9bfc1e3b",
+        "size": 2408445409,
+        "url": "https://ayakaui.vercel.app/d/seventeen/fogos/AyakaUI_fogos-GAPPS-17.0-20261124-2358.zip"
       }
     ],
     "type": "ci",
